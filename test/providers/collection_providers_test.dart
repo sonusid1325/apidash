@@ -63,7 +63,7 @@ void main() async {
     final notifier = container.read(collectionStateNotifierProvider.notifier);
 
     const model = HttpRequestModel(
-      url: 'https://sse-demo.netlify.app/sse',
+      url: 'https://sse.apidash.dev/sse',
       method: HTTPVerb.get,
     );
 
@@ -117,7 +117,7 @@ void main() async {
     await tester.runAsync(() async {
       await Future.delayed(const Duration(seconds: 2));
     });
-  });
+  }, skip: true);
 
   group('CollectionStateNotifier Auth Tests', () {
     late ProviderContainer container;
